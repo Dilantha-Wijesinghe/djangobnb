@@ -16,12 +16,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const content = <p>Content</p>;
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
         <div className="pt-32">{children}</div>
-        <Modal />
+        <Modal label="Modal Header" content={content} isOpen={false} />
       </body>
     </html>
   );
